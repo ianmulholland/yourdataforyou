@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
 	</head>
 	<body class="is-preload">
 
@@ -269,8 +271,38 @@
 							<section id="second" class="main special">
 								<header class="major">
 									<h2>Why is privacy important?</h2>
-									<p>Take a second to think about what you would share with a random stranger. Would you share your medical records, bank statements, or your shopping history? Whenever we go online, we leave a digital footprint that can be used to identify our preferences, habits, and interests.  And that typical digital footprint is massive - we create and leave behind massive amounts of data each day. Each time we visit a website, watch a video, or swipe a screen, we transform our actions into data. The more information we share, the more companies or governments can aggregate data to represent you as an individual.</p>
-								</header>
+									<p id="typed-text">Take a second to think about what you would share with a random stranger.
+										 Would you share your medical records, bank statements, or your shopping history? Whenever we go online, we leave a digital footprint that can be used to identify our preferences, habits, and interests.
+										   And that typical digital footprint is massive - we create and leave behind massive amounts of data each day. Each time we visit a website, watch a video, or swipe a screen, we transform our actions into data. The more information we share, the more companies or governments can aggregate data to represent you as an individual.</p>
+								<script>
+									const typed = new Typed('#typed-text', {
+									strings: ['Take a second to think about what you would share with a random stranger...',
+												'Would you share your medical records, bank statements, or your shopping history?',
+												'Whenever we go online, we leave a digital footprint that can be used to identify our preferences, habits, and interests.',
+												'And that typical digital footprint is massive - we create and leave behind massive amounts of data each day.',
+												'Each time we visit a website, watch a video, or swipe a screen, we transform our actions into data.',
+												'The more information we share, the more companies or governments can aggregate data to represent you as an individual.'],
+									typeSpeed: 5000, // speed of typing in milliseconds
+									backSpeed: 30, // speed of deleting text in milliseconds
+									loop: true // set to true to loop through the strings
+									});
+
+								</script>
+								<!-- <style>
+									#typed-text {
+										animation: typing 3s steps(500, end);
+										overflow: hidden;
+										white-space: nowrap;
+										font-size: 20px;
+										border-right: 2px solid black;
+										}
+
+										@keyframes typing {
+										from { width: 0 }
+										to { width: 100% }
+										}
+								</style> -->
+										</header>
 
 								<h2>Major Privacy Issues</h2>
 

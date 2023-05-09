@@ -1,0 +1,52 @@
+.chart_intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Avenir;
+    font-size: 18px;
+    color: black;
+  }
+  
+  h1 {
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .line1:hover:before {
+    content: "Name: William Howard Taft";
+  }
+  
+  .line2:hover:before {
+    content: "Date of birth: 9/15/1857";
+  }
+  
+  .line3:hover:before {
+    content: "Occupation: 27th President of the US";
+  }
+  
+  .line1:hover:before,
+  .line2:hover:before,
+  .line3:hover:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .chart_intro:hover .line1:before,
+  .chart_intro:hover .line2:before,
+  .chart_intro:hover .line3:before {
+    display: block;
+  }
+  
+  .chart_intro .line1:before,
+  .chart_intro .line2:before,
+  .chart_intro .line3:before {
+    display: none;
+  }

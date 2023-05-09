@@ -1,455 +1,565 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>your data, for you</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+		<!DOCTYPE HTML>
+		<!--
+			Stellar by HTML5 UP
+			html5up.net | @ajlkn
+			Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+		-->
+		<html>
+			<head>
+				<title>your data, for you</title>
+				<meta charset="utf-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+				<link rel="stylesheet" href="assets/css/main.css" />
+				<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+				<!-- for the Intial Info part -->
+				<script src="https://d3js.org/d3.v6.min.js"></script>		
+			</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo2.jpg" alt="" width="70" height="70" /></span>
-						<h1>your data, for you</h1>
-						<p>Keeping Your Data Safe: Tips and Tools for Privacy Awareness<br />
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">What is privacy?</a></li>
-							<li><a href="#second">Why is privacy important?</a></li>
-							<li><a href="#third">What are companies collecting?</a></li>
-							<li><a href="#fourth">Taking back control of your data</a></li>
-
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Introduction to your data, for you</h2>
-										</header>
-										<p>Take a second to think of every website, online store, app, platform, or service you have given a phone number or email to. When was the last time you read the Terms of Services?
-
-											If your answer is "never," don't worry - you're not alone. In fact, studies estimate that over 91% of people consent to Terms of Service without ever reading them. For younger people between the ages of 18 and 34, this number is even higher, at 97% [1]. This means that the vast majority of us are blindly agreeing to terms that we may not fully understand, potentially putting our online privacy and security at risk.
-											
-											Online privacy doesn't have to be complicated, intimidating, or burdensome. This guide is designed to provide you with a simple and straightforward understanding of what online privacy is, why it matters, and how you can take steps to protect yourself. You'll find practical recommendations and tools that can help you improve your privacy and regain control over your data.
-											</p>
-										<ul class="actions">
-											<li><a href="https://docs.google.com/document/d/1WD73205a3FnROhU82OQDuQY1V0M_8EGnGfX7wfFz454/edit?usp=sharing" class="button" target="_blank"><b>First, let's dive into our Terms of Service</b></a></li>
-										  </ul>
-										  
-										<form action="#first">
-											<input type="checkbox" id="terms" name="terms" value="agree">
-											<label for="terms"> I agree to the terms</label><br>
-										  </form>
-									</div>
-									<span class="image"><img src="images/computer.gif" alt="" /></span>
-								</div>
-							</section>
-							
-
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>What is privacy?</h2>
-								</header>
-
-								<p>We all probably close and lock the door behind us when we leave home so no one comes into our home and rummages through our possessions, we all probably use headphones when we’re listening to an embarrassing song in public, and we all probably prefer if our doctor doesn’t live Tweet our medical appointments.
-
-									Privacy is a concept that we regularly practice and value in our daily lives, and it has been explored and discussed for millenia by philosophers, legal scholars, sociologists, and technologists. However, online privacy differs slightly from the way we typically practice privacy in our offline lives. Online privacy is less about what we are doing and more about who we are and what we are doing. It's about protecting our digital identity and personal information from being accessed or misused by others on the internet [2].
-									</p>
-								
-								<h3>There are two interpretations of privacy:</h3>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Privacy is the right to be left alone</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Control over personal information</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-								</ul>
-
-						<!-- Timeline Section -->
-								<h2>
-									How has online privacy changed?
-								</h2>
-								<p>In recent years, there has been a significant shift in public perception around privacy practices of companies. With increasing public awareness around data breaches, online tracking, and targeted advertising, people are becoming more concerned about how their personal information is being collected, used, and shared. </p>								
-								<style>
-									* {
-									  box-sizing: border-box;
-									}
-			
-									
-									/* The actual timeline (the vertical ruler) */
-									.timeline {
-									  position: relative;
-									  max-width: 1200px;
-									  margin: 0 auto;
-									}
-									
-									/* The actual timeline (the vertical ruler) */
-									.timeline::after {
-									  content: '';
-									  position: absolute;
-									  width: 6px;
-									  background-color: #af6a8cff;
-									  top: 0;
-									  bottom: 0;
-									  left: 50%;
-									  margin-left: 7px;
-									}
-									
-									/* Container around content */
-									.container {
-									  padding: 10px 40px;
-									  position: relative;
-									  background-color: inherit;
-									  width: 50%;
-									}
-									
-									/* The circles on the timeline */
-									.container::after {
-									  content: '';
-									  position: absolute;
-									  width: 25px;
-									  height: 25px;
-									  right: -17px;
-									  background-color: #af6a8cff;
-									  border: 4px solid #FF9F55;
-									  top: 15px;
-									  border-radius: 50%;
-									  z-index: 1;
-									}
-									
-									/* Place the container to the left */
-									.left {
-									  left: 0;
-									}
-									
-									/* Place the container to the right */
-									.right {
-									  left: 50%;
-									}
-									
-									/* Add arrows to the left container (pointing right) */
-									.left::before {
-									  content: " ";
-									  height: 0;
-									  position: absolute;
-									  top: 22px;
-									  width: 0;
-									  z-index: 1;
-									  right: 30px;
-									  border: medium solid #af6a8cff;
-									  border-width: 10px 0 10px 10px;
-									  border-color: transparent transparent transparent #af6a8cff;
-									}
-									
-									/* Add arrows to the right container (pointing left) */
-									.right::before {
-									  content: " ";
-									  height: 0;
-									  position: absolute;
-									  top: 22px;
-									  width: 0;
-									  z-index: 1;
-									  left: 30px;
-									  border: medium solid #af6a8cff;
-									  border-width: 10px 10px 10px 0;
-									  border-color: transparent #af6a8cff transparent transparent;
-									}
-									
-									/* Fix the circle for containers on the right side */
-									.right::after {
-									  left: -16px;
-									}
-									
-									/* The actual content */
-									.content {
-									  padding: 20px 30px;
-									  background-color: white;
-									  border-color: #af6a8cff;
-									  position: relative;
-									  border-radius: 6px;
-									}
-									
-									/* Media queries - Responsive timeline on screens less than 600px wide */
-									@media screen and (max-width: 600px) {
-									  /* Place the timelime to the left */
-									  .timeline::after {
-									  left: 31px;
-									  }
-									  
-									  /* Full-width containers */
-									  .container {
-									  width: 100%;
-									  padding-left: 70px;
-									  padding-right: 25px;
-									  }
-									  
-									  /* Make sure that all arrows are pointing leftwards */
-									  .container::before {
-									  left: 60px;
-									  border: medium solid #af6a8cff;
-									  border-width: 10px 10px 10px 0;
-									  border-color: transparent white transparent transparent;
-									  }
-									
-									  /* Make sure all circles are at the same spot */
-									  .left::after, .right::after {
-									  left: 15px;
-									  }
-									  
-									  /* Make all right containers behave like the left ones */
-									  .right {
-									  left: 0%;
-									  }
-									}
-									</style>
-									</head>
-									<body>
-									
-									<div class="timeline">
-									  <div class="container left">
-										<div class="content">
-										  <h2>2000-2004: Emergence of the Digital Age</h2>
-										  <p>In the early days of the internet, data privacy concerns were minimal. Companies, like Google, processed data collectively, rather than on an individual level. This meant that the information collected focused mainly on the search terms and clicked websites, rather than the users' browsing history, location data, or social media activity.</p>
-										
-										</div>
-									  </div>
-									  
-									  <div class="container right">
-										<div class="content">
-										  <h2>2005-2011: Data-Driven Advertising and Mobile Internet</h2>
-										  <p>As the number of internet users increased, companies began focusing more on individual data collection. Facebook and Google were among the first to realize that individually processed data could be used more effectively for advertising purposes. Smartphones and social media provided new opportunities for tracking and advertising. However, with these developments came the first instances of major data breaches.</p>
-										</div>
-										<div class="flourish-embed flourish-chart" data-src="visualisation/13649369"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-									  </div>
-									  <div class="container left">
-										<div class="content">
-										  <h2>2012-2017:Increase in Data Breaches and Decrease in Trust</h2>
-										  <p>Over the years, data breaches have become more frequent and extensive. Between 2012 and 2017, there were over 130 data breaches, with the largest being Yahoo's breach that affected three billion accounts in 2013. In total, over 4.5 billion records were compromised in just five years, and up to one in three Americans experienced a data breach every year.</p>
-										  <span class="image"><img src="images/breach_gif.gif" alt="" width="300" height="200" /></span>
-
-										</div>
-									  </div>										
-									  <div class="container right">
-										<div class="content">
-										  <h2>2018-Present: Stricter Data Protection Laws</h2>
-										  <p>After two decades of widespread internet use, people and governments have come to recognize the criticality of safeguarding personal data [1]. Over 80 countries have implemented privacy and security laws related to the internet, and both companies and governments are striving to improve the subpar standards left over from the internet's early days.</p>
-										</div>
-									  </div>
-									</div>
-									</body>
-							</section>
-
-						<!-- Why is privacy Important Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Why is privacy important?</h2>
-									<p>Take a second to think about what you would share with a random stranger. Would you share your medical records, bank statements, or your shopping history? Whenever we go online, we leave a digital footprint that can be used to identify our preferences, habits, and interests.  And that typical digital footprint is massive - we create and leave behind massive amounts of data each day. Each time we visit a website, watch a video, or swipe a screen, we transform our actions into data. The more information we share, the more companies or governments can aggregate data to represent you as an individual.</p>
-
-								<p>In recent years, there have been numerous high-profile privacy breaches across many sectors. Every year, breaches do not only become more frequent, they also become larger. These incidents illustrate how vulnerable our personal information is and how easily it can be exploited.</p>
-							</header>
-							<div class="flourish-embed flourish-scatter" data-src="visualisation/13637893"><script src="https://public.flourish.studio/resources/embed.js"></script></div>								
-							<header class="major">
-								<p>It is essential to understand that privacy breaches can happen to anyone, and the risks increase when we have multiple online accounts. The more accounts we have, the higher the risk someone can use compromised login credentials to gain access to multiple accounts, steal sensitive data, and cause irreparable damage to our online reputation. 
-								<p>Can you guess how many online accounts an average American has?</p>
-								</header>
-								<label for="num-accounts">How many accounts does the average American have?</label>
-								<input type="number" id="num-accounts" onchange="checkNumAccounts()">
-								
-								<p id="feedback"></p>
-								
-								<script>
-								  function checkNumAccounts() {
-									let numAccounts = document.getElementById("num-accounts").value;
-									let feedback = document.getElementById("feedback");
-									
-									if (numAccounts < 130) {
-									  feedback.textContent = "Nope! The average American has 130 online accounts registered to a single email!";
-									} else if (numAccounts > 130) {
-									  feedback.textContent = "Not quite that many! The average American has 130 online accounts registered to a single email!";
-									} else {
-									  feedback.textContent = "Bingo!";
-									}
-								  }
-								</script>
-
-							</section>
-				<!-- What are companies collecting -->
-							<section id="third" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>What are companies collecting about you</h2>
-											<p>Anytime you agree to a Terms of Service, you agree to share information and data about yourself. <b>So what are companies collecting and using?</b></p>
-											<div class="flourish-embed flourish-heatmap" data-src="visualisation/13638983"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-										</header>
-										<h2>How do companies compare with each other?</h2>
-										<p>Common Sense Privacy Evaluations is a comprehensive privacy evaluation system for websites, apps, and platforms used by children and families. The system employs a standardized evaluation process that assesses the privacy practices of websites, apps, and platforms across multiple categories, such as data collection, third-party sharing, and privacy policies. The privacy evaluations result in a score on a scale of 1-100, with higher scores indicating better privacy practices.</p>
-										<p>Select the companies that you use and compare their scores.</p>	
-										<div class="flourish-embed flourish-chart" data-src="visualisation/13638579"><script src="https://public.flourish.studio/resources/embed.js"></script></div>									</div>
-								</div>
-								
-							</section>
-
-				<!-- Steps to Improve your Privacy Section -->
-							<section id="fourth" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Taking back control of your data</h2>
-										<p>Remember our earlier definitions of privacy? The right to be left alone and the right to have control over your data are at the cornerstone of what privacy is. This section includes information on your rights to your data as a California resident and steps to improve your privacy online.</p>
-										</header>
-										<h2>Knowing your rights</h2>
-										<p>Privacy is considered a fundamental human right that is protected by various governments and international organizations. It allows individuals to have control over their personal information and to maintain their dignity and autonomy. Governments have implemented privacy laws and regulations to safeguard individuals from unlawful or unauthorized collection, use, and disclosure of their personal information.</p>
-
-										<p>If you reside in California, regulation guarantees that you have enforceable privacy rights:</p>
-
-										<ul>
-										<li>The right to know about the personal information a business collects about you and how it is used and shared</li>
-										<li>The right to delete personal information collected from you</li>
-										<li>The right to opt-out of the sale or sharing of your personal information</li>
-										<li>The right to correct inaccurate personal information that a business has about you</li>
-										<li>The right to limit the use and disclosure of sensitive personal information collected about you</li>
-										<li>The right to non-discrimination for exercising your CCPA rights</li>
-										</ul>
-								</div>
-							</section>
-
-						<section>
-							<div class="spotlight">
-								<div class="content">
-									<header class="major">
-										<h2>Steps to take to improve your privacy</h2>
-										<p>It may seem like there is no way to prevent companies and governments from using your data, and that privacy is a battle won and fought in court cases and litigation. That’s far from true! You can take steps to ensure that your data remains under your control. Here are some immediate ways to improve your privacy online.<br />
-
-									</header>
-									<section>
-									<h2><b>Limit who tracks you</b></h2>
-									<p>Knowing how companies track users online is important because it can have significant implications for one's privacy and security. Companies can collect data on users' browsing habits, search history, and personal information, which can be used for targeted advertising, identity theft, and other nefarious purposes.
-
-										To pay attention to cookies, one can adjust their browser settings to control cookie usage, delete cookies regularly, and use private browsing modes. It's also important to be aware of the types of cookies that websites use, such as first-party and third-party cookies, and what they do.
-										
-										Using ad blockers can also be a useful tool for protecting one's privacy online. Ad blockers can prevent websites from displaying ads, which can often be a source of tracking cookies and other types of tracking scripts. However, it's important to note that some websites rely on ad revenue to function, so it's important to be selective when using ad blockers and whitelist websites that you trust.
-									
-										<span>
-											<div class="flourish-embed flourish-photo-slider" data-src="visualisation/13648867" style="width: 400px; height: 300px;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-										</span>
-									</p>
-									</span>
-									  									
-									<h2 style="margin-top: 150px;"><b>Have a strong password</b></h2>
-
-									<p>A strong password makes it much more difficult for an attacker to gain access to your accounts, even if they manage to obtain your username or email address. With the increasing number of data breaches and cyber attacks, it is more important than ever to use strong and unique passwords for each of your online accounts to minimize the risk of your personal and financial information being compromised.</p>
-									<p>Over <b>21 million</b> people use "password" as their password. Click the button below to see how to improve the strength of that password. </p>
+			<body class="is-preload">
+				<!-- Wrapper -->
+					<div id="wrapper">
 				
-									<!-- Password Button Section -->
-									<h3 id="password"><b>Password</b></h3>
-									<button id="improve-password-btn" style="margin-bottom: 20px;">Improve this password</button>
-									<div id="improvement-info"></div>				
-									
-									<script>
-									  const passwordElement = document.getElementById("password");
-									  const improvePasswordBtn = document.getElementById("improve-password-btn");
-									  const improvementInfo = document.getElementById("improvement-info");
-									
-									  let improvementLevel = 0;
-									  const improvements = [
-										{
-										  text: "Phrases rather than words can improve security",
-										  password: "opensesame"
-										},
-										{
-										  text: "Including upper and lower case is an even better idea",
-										  password: "Opensesame"
-										},
-										{
-										  text: "Including upper and special characters and numbers is a good idea",
-										  password: "Op3ns3s@me"
-										}
-									  ];
-									
-									  improvePasswordBtn.addEventListener("click", () => {
-										if (improvementLevel < improvements.length) {
-										  const nextImprovement = improvements[improvementLevel];
-										  passwordElement.textContent = nextImprovement.password;
-										  improvementInfo.textContent = nextImprovement.text;
-										  improvementLevel++;
-										}
-									  });
-									</script>
+						<!-- Header -->
+						<script src="assets/js/intro_hiddenInfo.js"></script>
+							<header id="header" class="alt">
+								<span class="logo"><img src="images/logo2.jpg" alt="" width="70" height="70" /></span>
+								<h1>your data, for you</h1>
+								<p>Keeping Your Data Safe: Tips and Tools for Privacy Awareness<br />
+							</header>
 
-									<h2><b>Know what you're agreeing to</b></h2>
-									<p>Understanding the terms of service is important because it allows you to know what data the company is collecting from you, how they will use it, and who they may share it with. It might be impossible to fully understand the details of every terms of service, it is important to be aware of what is being collected and what rights you have to your data. Consider using tools, like CommonSense, to evaluate the safety and privacy of your data.</p>
-									<script type="text/javascript">
-										(function(d,s,id,u){
-										  if (d.getElementById(id)) return;
-										  var js, sjs = d.getElementsByTagName(s)[0],
-											  t = Math.floor(new Date().getTime() / 1000000);
-										  js=d.createElement(s); js.id=id; js.async=1; js.src=u+'?'+t;
-										  sjs.parentNode.insertBefore(js, sjs);
-										}(document, 'script', 'os-widget-jssdk', 'https://www.opinionstage.com/assets/loader.js'));
-										</script><div id="os-widget-1139324" class="os_poll" data-path="/polls/2901555" data-of="ian-mulholland" data-opinionstage-widget="2427295e-f6f8-4be6-a83b-90af94e52fcf"></div>
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="#intro" class="active">Introduction</a></li>
+									<li><a href="#first">What is privacy?</a></li>
+									<li><a href="#second">Why is privacy important?</a></li>
+									<li><a href="#third">What are companies collecting?</a></li>
+									<li><a href="#fourth">Taking back control of your data</a></li>
+									<li><a href="#five">Netflix Data Subject Access Request Process</a></li>
+									<li><a href="#six">Tableau Dashboard</a></li>
+								</ul>
+							</nav>
+
+						<!-- Main -->
+						<div id="main">
+
+								<!-- Introduction -->
+									<section id="intro" class="main">
+										<div class="spotlight">
+											<div class="content">
+												<header class="major">
+													<h2>Introduction to your data, for you</h2>
+												</header>
+												<p>Take a second to think of every website, online store, app, platform, or service you have given a phone number or email to. When was the last time you read the Terms of Services?
+
+													If your answer is "never," don't worry - you're not alone. In fact, studies estimate that over 91% of people consent to Terms of Service without ever reading them. For younger people between the ages of 18 and 34, this number is even higher, at 97% [1]. This means that the vast majority of us are blindly agreeing to terms that we may not fully understand, potentially putting our online privacy and security at risk.
+													
+													Online privacy doesn't have to be complicated, intimidating, or burdensome. This guide is designed to provide you with a simple and straightforward understanding of what online privacy is, why it matters, and how you can take steps to protect yourself. You'll find practical recommendations and tools that can help you improve your privacy and regain control over your data.
+													</p>
+												<ul class="actions">
+													<li><a href="https://docs.google.com/document/d/1WD73205a3FnROhU82OQDuQY1V0M_8EGnGfX7wfFz454/edit?usp=sharing" class="button" target="_blank"><b>First, let's dive into our Terms of Service</b></a></li>
+												</ul>
+												
+												<form action="#first">
+													<input type="checkbox" id="terms" name="terms" value="agree">
+													<label for="terms"> I agree to the terms</label><br>
+												</form>
+											</div>
+											<span class="image"><img src="images/computer.gif" alt="" /></span>
+										</div>
+									</section>
+									
+
+								<!-- First Section -->
+									<section id="first" class="main special">
+										<header class="major">
+											<h2>What is privacy?</h2>
+										</header>
+
+										<p>We all probably close and lock the door behind us when we leave home so no one comes into our home and rummages through our possessions, we all probably use headphones when we’re listening to an embarrassing song in public, and we all probably prefer if our doctor doesn’t live Tweet our medical appointments.
+
+											Privacy is a concept that we regularly practice and value in our daily lives, and it has been explored and discussed for millenia by philosophers, legal scholars, sociologists, and technologists. However, online privacy differs slightly from the way we typically practice privacy in our offline lives. Online privacy is less about what we are doing and more about who we are and what we are doing. It's about protecting our digital identity and personal information from being accessed or misused by others on the internet [2].
+											</p>
 										
+										
+
+										<h3>There are two interpretations of privacy:</h3>
+										<ul class="features">
+										<li>
+											<div class="feature-item">
+											
+											<img src="images/take_control.jpg" alt="Control over personal information">
+											<h3>Privacy is the right to be left alone</h3>
+											<p>Privacy is the right to be free from intrusion or unwanted attention, to control one's personal information, and to be able to express oneself freely without fear of surveillance or censorship.</p>
+											</div>
+										</li>
+										<li>
+											<div class="feature-item">
+											<img src="images/personal_control.jpg" alt="Privacy is the right to be left alone">
+											<h3>Control over personal information</h3>
+											<p>Users should have control over their personal information, including how it is used, processed, and accessed by others, as it is often considered an extension of their self.</p>
+											</div>
+										</li>
+										</ul>
+										
+										<style>
+										.features {
+										list-style: none;
+										margin: 0;
+										padding: 0;
+										display: flex;
+										justify-content: center;
+										}
+										
+										.features li {
+										margin: 0 20px;
+										}
+										
+										.feature-item {
+										display: flex;
+										flex-direction: column;
+										align-items: center;
+										text-align: center;
+										}
+										
+										.feature-item img {
+										width: 200px;
+										height: 200px;
+										object-fit: contain;
+										margin-bottom: 10px;
+										}
+										</style>
+										
+
+
+
+
+
+								<!-- Timeline Section -->
+										<h2>
+											How has online privacy changed?
+										</h2>
+										<p>In recent years, there has been a significant shift in public perception around privacy practices of companies. With increasing public awareness around data breaches, online tracking, and targeted advertising, people are becoming more concerned about how their personal information is being collected, used, and shared. </p>								
+										<style>
+											* {
+											box-sizing: border-box;
+											}
+					
+											
+											/* The actual timeline (the vertical ruler) */
+											.timeline {
+											position: relative;
+											max-width: 1200px;
+											margin: 0 auto;
+											}
+											
+											/* The actual timeline (the vertical ruler) */
+											.timeline::after {
+											content: '';
+											position: absolute;
+											width: 6px;
+											background-color: #af6a8cff;
+											top: 0;
+											bottom: 0;
+											left: 50%;
+											margin-left: 7px;
+											}
+											
+											/* Container around content */
+											.container {
+											padding: 10px 40px;
+											position: relative;
+											background-color: inherit;
+											width: 50%;
+											}
+											
+											/* The circles on the timeline */
+											.container::after {
+											content: '';
+											position: absolute;
+											width: 25px;
+											height: 25px;
+											right: -17px;
+											background-color: #af6a8cff;
+											border: 4px solid #FF9F55;
+											top: 15px;
+											border-radius: 50%;
+											z-index: 1;
+											}
+											
+											/* Place the container to the left */
+											.left {
+											left: 0;
+											}
+											
+											/* Place the container to the right */
+											.right {
+											left: 50%;
+											}
+											
+											/* Add arrows to the left container (pointing right) */
+											.left::before {
+											content: " ";
+											height: 0;
+											position: absolute;
+											top: 22px;
+											width: 0;
+											z-index: 1;
+											right: 30px;
+											border: medium solid #af6a8cff;
+											border-width: 10px 0 10px 10px;
+											border-color: transparent transparent transparent #af6a8cff;
+											}
+											
+											/* Add arrows to the right container (pointing left) */
+											.right::before {
+											content: " ";
+											height: 0;
+											position: absolute;
+											top: 22px;
+											width: 0;
+											z-index: 1;
+											left: 30px;
+											border: medium solid #af6a8cff;
+											border-width: 10px 10px 10px 0;
+											border-color: transparent #af6a8cff transparent transparent;
+											}
+											
+											/* Fix the circle for containers on the right side */
+											.right::after {
+											left: -16px;
+											}
+											
+											/* The actual content */
+											.content {
+											padding: 20px 30px;
+											background-color: white;
+											border-color: #af6a8cff;
+											position: relative;
+											border-radius: 6px;
+											}
+											
+											/* Media queries - Responsive timeline on screens less than 600px wide */
+											@media screen and (max-width: 600px) {
+											/* Place the timelime to the left */
+											.timeline::after {
+											left: 31px;
+											}
+											
+											/* Full-width containers */
+											.container {
+											width: 100%;
+											padding-left: 70px;
+											padding-right: 25px;
+											}
+											
+											/* Make sure that all arrows are pointing leftwards */
+											.container::before {
+											left: 60px;
+											border: medium solid #af6a8cff;
+											border-width: 10px 10px 10px 0;
+											border-color: transparent white transparent transparent;
+											}
+											
+											/* Make sure all circles are at the same spot */
+											.left::after, .right::after {
+											left: 15px;
+											}
+											
+											/* Make all right containers behave like the left ones */
+											.right {
+											left: 0%;
+											}
+											}
+											</style>
+											</head>
+											<body>
+											
+											<div class="timeline">
+											<div class="container left">
+												<div class="content">
+												<h2>2000-2004: Emergence of the Digital Age</h2>
+												<p>In the early days of the internet, data privacy concerns were minimal. Companies, like Google, processed data collectively, rather than on an individual level. This meant that the information collected focused mainly on the search terms and clicked websites, rather than the users' browsing history, location data, or social media activity.</p>
+												
+												</div>
+											</div>
+											
+											<div class="container right">
+												<div class="content">
+												<h2>2005-2011: Data-Driven Advertising and Mobile Internet</h2>
+												<p>As the number of internet users increased, companies began focusing more on individual data collection. Facebook and Google were among the first to realize that individually processed data could be used more effectively for advertising purposes. Smartphones and social media provided new opportunities for tracking and advertising. However, with these developments came the first instances of major data breaches.</p>
+												</div>
+												<div class="flourish-embed flourish-chart" data-src="visualisation/13649369"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+											</div>
+											<div class="container left">
+												<div class="content">
+												<h2>2012-2017:Increase in Data Breaches and Decrease in Trust</h2>
+												<p>Over the years, data breaches have become more frequent and extensive. Between 2012 and 2017, there were over 130 data breaches, with the largest being Yahoo's breach that affected three billion accounts in 2013. In total, over 4.5 billion records were compromised in just five years, and up to one in three Americans experienced a data breach every year.</p>
+												<span class="image"><img src="images/breach_gif.gif" alt="" width="300" height="200" /></span>
+
+												</div>
+											</div>										
+											<div class="container right">
+												<div class="content">
+												<h2>2018-Present: Stricter Data Protection Laws</h2>
+												<p>After two decades of widespread internet use, people and governments have come to recognize the criticality of safeguarding personal data [1]. Over 80 countries have implemented privacy and security laws related to the internet, and both companies and governments are striving to improve the subpar standards left over from the internet's early days.</p>
+												</div>
+											</div>
+											</div>
+											</body>
+									</section>
+
+								<!-- Why is privacy Important Section -->
+									<section id="second" class="main special">
+										<header class="major">
+											<h2>Why is privacy important?</h2>
+											<img src="images/chat_animation.gif" alt="Animated GIF">
+											<!-- <p>Take a second to think about what you would share with 
+												a random stranger. Would you share your medical records,
+												bank statements, or your shopping history? Whenever we go online,
+												we leave a digital footprint that can be used to identify our preferences, habits, and interests. 
+												And that typical digital footprint is massive - we create and leave behind massive amounts of data each day. 
+												Each time we visit a website, watch a video, or swipe a screen, we transform our actions into data. The more information we share, 
+												the more companies or governments can aggregate data to represent you as an individual.</p> -->
+											<p>What would you have done if you were Kevin? Probably the same right
+												! If we are not comfortable sharing personal information with stranger why are we okay leaving equally sensitive information online?
+												Whenever we go online,
+												we leave a digital footprint that can be used to identify our preferences, habits, and interests. 
+												And that typical digital footprint is massive - we create and leave behind massive amounts of data each day. 
+												Each time we visit a website, watch a video, or swipe a screen, we transform our actions into data. The more information we share, 
+												the more companies or governments can aggregate data to represent you as an individual.
+												<img src="images/digital_fingerprint.svg" alt="Finger Print and digital">
+												<p> In today's digital age, a person's digital footprint is comparable to their fingerprint, as it can be used to uniquely identify them.</p>
+											</p>
+											<hr size="4" width="100%" color="#C9C9C9" align="center">
+									
+										
+										
+										<p>In recent years, there have been numerous high-profile privacy breaches across many sectors. Every year, breaches do not only become more frequent, they also become larger. These incidents illustrate how vulnerable our personal information is and how easily it can be exploited.</p>
+										<img src="images/comp_breach.gif" alt="" />
+										
+									
+									</header>
+								<div class="flourish-embed flourish-scatter" data-src="visualisation/13637893"><script src="https://public.flourish.studio/resources/embed.js"></script></div>								
+									<header class="major">
+										<p>It is essential to understand that privacy breaches can happen to anyone, and the risks increase when we have multiple online accounts. The more accounts we have, the higher the risk someone can use compromised login credentials to gain access to multiple accounts, steal sensitive data, and cause irreparable damage to our online reputation. 
+										<p>Can you guess how many online accounts an average American has?</p>
+										</header>
+										<label for="num-accounts">How many accounts does the average American have?</label>
+										<input type="number" id="num-accounts" onchange="checkNumAccounts()">
+										
+										<p id="feedback"></p>
+										
+										<script>
+										function checkNumAccounts() {
+											let numAccounts = document.getElementById("num-accounts").value;
+											let feedback = document.getElementById("feedback");
+											
+											if (numAccounts < 130) {
+											feedback.textContent = "Nope! The average American has 130 online accounts registered to a single email!";
+											} else if (numAccounts > 130) {
+											feedback.textContent = "Not quite that many! The average American has 130 online accounts registered to a single email!";
+											} else {
+											feedback.textContent = "Bingo!";
+											}
+										}
+										</script>
 
 									</section>
-							</div>
-						</section>
+								<!-- What are companies collecting -->
+									<section id="third" class="main">
+										<div class="spotlight">
+											<div class="content">
+												<header class="major">
+													<h2>What are companies collecting about you</h2>
+													<p>Anytime you agree to a Terms of Service, you agree to share information and data about yourself. <b>So what are companies collecting and using?</b></p>
+													<div class="flourish-embed flourish-heatmap" data-src="visualisation/13638983"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+												</header>
+												<h2>How do companies compare with each other?</h2>
+												<p>Common Sense Privacy Evaluations is a comprehensive privacy evaluation system for websites, apps, and platforms used by children and families. The system employs a standardized evaluation process that assesses the privacy practices of websites, apps, and platforms across multiple categories, such as data collection, third-party sharing, and privacy policies. The privacy evaluations result in a score on a scale of 1-100, with higher scores indicating better privacy practices.</p>
+												<p>Select the companies that you use and compare their scores.</p>	
+												<!-- <div class="flourish-embed flourish-chart" data-src="visualisation/13638579"><script src="https://public.flourish.studio/resources/embed.js"></script></div>									 -->
+												<div class="flourish-embed flourish-chart" data-src="visualisation/13668553"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+											</div>
+										</div>
+										
+									</section>
 
-					</section>
+								<!-- Steps to Improve your Privacy Section -->
+									<section id="fourth" class="main" >
+										<div class="spotlight">
+											<div class="content" style="background-image: url('images/rights_u.svg');background-repeat: no-repeat;
+											background-position: center center;">
+												<header class="major">
+													<h2>Taking back control of your data</h2>
+												<p>Remember our earlier definitions of privacy? The right to be left alone and the right to have control over your data are at the cornerstone of what privacy is. This section includes information on your rights to your data as a California resident and steps to improve your privacy online.</p>
+												</header>
+												<h2>Knowing your rights</h2>
+												<p>Privacy is considered a fundamental human right that is protected by various governments and international organizations. It allows individuals to have control over their personal information and to maintain their dignity and autonomy. Governments have implemented privacy laws and regulations to safeguard individuals from unlawful or unauthorized collection, use, and disclosure of their personal information.</p>
+
+												<p>If you reside in California, regulation guarantees that you have enforceable privacy rights:</p>
+
+												<ul>
+												<li>The right to know about the personal information a business collects about you and how it is used and shared</li>
+												<li>The right to delete personal information collected from you</li>
+												<li>The right to opt-out of the sale or sharing of your personal information</li>
+												<li>The right to correct inaccurate personal information that a business has about you</li>
+												<li>The right to limit the use and disclosure of sensitive personal information collected about you</li>
+												<li>The right to non-discrimination for exercising your CCPA rights</li>
+												</ul>
+										</div>
+									</section>
+									<style>
+										body {
+											background-image: url("path/to/image.jpg");
+											background-size: cover;
+											background-position: center;
+										}
+									</style>
+							
+								<section>
+									<div class="spotlight">
+										<div class="content">
+											<header class="major">
+												<h2>Steps to take to improve your privacy</h2>
+												<p>It may seem like there is no way to prevent companies and governments from using your data, and that privacy is a battle won and fought in court cases and litigation. That’s far from true! You can take steps to ensure that your data remains under your control. Here are some immediate ways to improve your privacy online.<br />
+
+											</header>
+											<section>
+											<h2><b>Limit who tracks you</b></h2>
+											<p>Knowing how companies track users online is important because it can have significant implications for one's privacy and security. Companies can collect data on users' browsing habits, search history, and personal information, which can be used for targeted advertising, identity theft, and other nefarious purposes.
+
+												To pay attention to cookies, one can adjust their browser settings to control cookie usage, delete cookies regularly, and use private browsing modes. It's also important to be aware of the types of cookies that websites use, such as first-party and third-party cookies, and what they do.
+												
+												Using ad blockers can also be a useful tool for protecting one's privacy online. Ad blockers can prevent websites from displaying ads, which can often be a source of tracking cookies and other types of tracking scripts. However, it's important to note that some websites rely on ad revenue to function, so it's important to be selective when using ad blockers and whitelist websites that you trust.
+											
+												<span>
+													<center>
+													<div class="flourish-embed flourish-photo-slider" data-src="visualisation/13648867" style="width: 400px; height: 300px;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+												</center>
+												</span>
+											</p>
+											</span>
+																				
+											<h2 style="margin-top: 150px;"><b>Have a strong password</b></h2>
+
+											<p>A strong password makes it much more difficult for an attacker to gain access to your accounts, even if they manage to obtain your username or email address. With the increasing number of data breaches and cyber attacks, it is more important than ever to use strong and unique passwords for each of your online accounts to minimize the risk of your personal and financial information being compromised.</p>
+											<p>Over <b>21 million</b> people use "password" as their password. Click the button below to see how to improve the strength of that password. </p>
+						
+											<!-- Password Button Section -->
+											<center>
+											<h2 id="password"><b>Password</b></h2>
+											<button id="improve-password-btn" style="margin-bottom: 20px;">Improve this password</button>
+											<div id="improvement-info"></div>				
+											</center>
+											<script>
+											const passwordElement = document.getElementById("password");
+											const improvePasswordBtn = document.getElementById("improve-password-btn");
+											const improvementInfo = document.getElementById("improvement-info");
+											
+											let improvementLevel = 0;
+											const improvements = [
+												{
+												text: "Phrases rather than words can improve security",
+												password: "opensesame"
+												},
+												{
+												text: "Including upper and lower case is an even better idea",
+												password: "Opensesame"
+												},
+												{
+												text: "Including upper and special characters and numbers is a good idea",
+												password: "Op3ns3s@me"
+												}
+											];
+											
+											improvePasswordBtn.addEventListener("click", () => {
+												if (improvementLevel < improvements.length) {
+												const nextImprovement = improvements[improvementLevel];
+												passwordElement.textContent = nextImprovement.password;
+												improvementInfo.textContent = nextImprovement.text;
+												improvementLevel++;
+												}
+											});
+											</script>
+
+											<h2><b>Know what you're agreeing to</b></h2>
+											<p>Understanding the terms of service is important because it allows you to know what data the company is collecting from you, how they will use it, and who they may share it with. It might be impossible to fully understand the details of every terms of service, it is important to be aware of what is being collected and what rights you have to your data. Consider using tools, like CommonSense, to evaluate the safety and privacy of your data.</p>
+											<script type="text/javascript">
+												(function(d,s,id,u){
+												if (d.getElementById(id)) return;
+												var js, sjs = d.getElementsByTagName(s)[0],
+													t = Math.floor(new Date().getTime() / 1000000);
+												js=d.createElement(s); js.id=id; js.async=1; js.src=u+'?'+t;
+												sjs.parentNode.insertBefore(js, sjs);
+												}(document, 'script', 'os-widget-jssdk', 'https://www.opinionstage.com/assets/loader.js'));
+												</script><div id="os-widget-1139324" class="os_poll" data-path="/polls/2901555" data-of="ian-mulholland" data-opinionstage-widget="2427295e-f6f8-4be6-a83b-90af94e52fcf"></div>
+										
+
+											</section>
+									</div>
+								</section>
+									<!-- Steps DSAR -->
+									<section id="five" class="main" >
+										<h2>Netflix Data Subject Access Request Process</h2>
+												<p>In order to use the below Tableau, dashboard to Analyze your Netlix Data you need to retrieve it first.</p>
+										<div class="spotlight">
+												<header class="major">			
+												</header>
+											<div id="observablehq-chart_-92cde534"></div>
+											<p><a href="https://observablehq.com/d/7d3ea859bf6ee456@46"></a></p>
+											<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+											<script type="module">
+											import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+											import define from "https://api.observablehq.com/d/7d3ea859bf6ee456@46.js?v=3";
+											new Runtime().module(define, name => {
+											if (name === "chart_") return new Inspector(document.querySelector("#observablehq-chart_-92cde534"));
+											});
+											</script>
 
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>About this project</h2>
-							<p>This project was born out of an Information Visualization and Presentation course. This project was focused on educating and empowering individuals to take control of their online privacy through information visualization techniques. By visualizing data on privacy risks, common privacy violations, and privacy-enhancing tools, we aimed to raise awareness and provide actionable insights for individuals to make informed decisions about their online privacy. Through our project, we hope to promote privacy education and empower individuals to take control of their digital privacy.</p>
-							<ul class="actions">
-								<li><a href="references.html" class="button">Our References</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2><b>Authors</b></h2>
-							<p>The authors of this project are passionate about privacy and come from diverse backgrounds including product development, data analysis, and social impact work. They bring their unique skills and experiences to the project and are committed to promoting privacy education and awareness.</p>
+									</div>
+									</section>
+							
+								<!-- Tbaleau Dashboard -->
+								<section id="six" class="main" >
+									<h2>Tableau Dashboard</h2>
 
-						</section>
-						<p class="copyright">&copy; your data, for you. Design: <a href="https://html5up.net">HTML5 UP - Tomorrow</a>.</p>
-					</footer>
+											<p>Please refer to the GIF to understand how to use the tool and then proceed to download the Tableau Dashboard locally for your use.</p>
+											<span class="image"><img src="images/Tableau dashboard v2.gif" alt="" width="1000" height="665" /></span>
+									<div class="spotlight">
+											<header class="major">
+								</div>
+								</section>
 
-			</div>
+								<!-- Footer -->
+								<footer id="footer">
+									<section>
+										<h2>About this project</h2>
+										<p>This project was born out of an Information Visualization and Presentation course. This project was focused on educating and empowering individuals to take control of their online privacy through information visualization techniques. By visualizing data on privacy risks, common privacy violations, and privacy-enhancing tools, we aimed to raise awareness and provide actionable insights for individuals to make informed decisions about their online privacy. Through our project, we hope to promote privacy education and empower individuals to take control of their digital privacy.</p>
+										<ul class="actions">
+											<li><a href="references.html" class="button">Our References</a></li>
+										</ul>
+									</section>
+									<section>
+										<h2><b>Authors</b></h2>
+										<p>The authors of this project are passionate about privacy and come from diverse backgrounds including product development, data analysis, and social impact work. They bring their unique skills and experiences to the project and are committed to promoting privacy education and awareness.</p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+									</section>
+									<p class="copyright">&copy; your data, for you. Design: <a href="https://html5up.net">HTML5 UP - Tomorrow</a>.</p>
+								</footer>
 
-	</body>
-</html>
+						</div>
+
+						<!-- Scripts -->
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/jquery.scrollex.min.js"></script>
+						<script src="assets/js/jquery.scrolly.min.js"></script>
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
+				
+					
+			</body>
+		</html>
